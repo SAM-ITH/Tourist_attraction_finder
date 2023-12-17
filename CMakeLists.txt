@@ -7,4 +7,6 @@ add_executable(Tourist_Attraction_Finder main.cpp
         Admission.cpp
         Admission.h
         Time.cpp
-        Time.h)
+        Time.h
+        Attraction.cpp
+        Attraction.h)
