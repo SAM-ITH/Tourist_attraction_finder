@@ -2,13 +2,20 @@
 // Created by Samith on 2023-12-17.
 //
 
-#ifndef TOURIST_ATTRACTION_FINDER_THEATRE_H
-#define TOURIST_ATTRACTION_FINDER_THEATRE_H
+#ifndef THEATRE_H
+#define THEATRE_H
 
+#include <string>
+#include "Attraction.h"
 
-class Theatre {
+class Theatre : public Attraction {
+public:
+    // Optional: Constructor that takes additional park-specific arguments
+    Theatre(const std::string& name, const Time& time, const Admission& admission);
+
+private:
+    // Park-specific data members
 
 };
 
-
-#endif //TOURIST_ATTRACTION_FINDER_THEATRE_H
+#endif
