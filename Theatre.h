@@ -1,0 +1,14 @@
+//
+// Created by Samith on 2023-12-17.
+//
+
+#ifndef TOURIST_ATTRACTION_FINDER_THEATRE_H
+#define TOURIST_ATTRACTION_FINDER_THEATRE_H
+
+
+class Theatre {
+
+};
+
+
+#endif //TOURIST_ATTRACTION_FINDER_THEATRE_H
