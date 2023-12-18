@@ -12,6 +12,9 @@ int main() {
     Park park1("Central Park", Time(10, 18), Admission(10.0));
     Museum museum1("National Museum", Time(9, 17), Admission(8.0));
     Theatre theater1("Grand Theater", Time(12, 22), Admission(15.0));
+    Park park2("North Park", Time(7, 18), Admission(0.0));
+    Museum museum2("Historic Museum", Time(9, 17), Admission(4.0));
+    Theatre theater2("London Theater", Time(12, 22), Admission(25.0));
 
     // Store attractions in a vector
     vector<Attraction*> attractions;
