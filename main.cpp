@@ -1,27 +1,29 @@
 #include <iostream>
 #include <vector>
 #include "Attraction.h"
+#include "Park.h"
+#include "Museum.h"
+#include "Theatre.h"
 
-const int OPENING_TIME_THRESHOLD = 1900; // 7 PM
-const double PRICE_THRESHOLD = 5.0; // £5
+using namespace std;
 
 int main() {
-    // Create some sample attractions
-    Attraction ferrisWheel("Ferris Wheel", Time(1000, 2200), Admission(8.00)); // Open 10 AM - 10 PM, £8
-    Attraction hauntedHouse("Haunted House", Time(1200, 0000), Admission(6.00)); // Open 12 PM - midnight, £6
-    Attraction laserTag("Laser Tag", Time(0900, 2100), Admission(4.00)); // Open 9 AM - 9 PM, £4
+    // Create some example attractions
+    Park park1("Central Park", Time(10, 18), Admission(10.0));
+    Museum museum1("National Museum", Time(9, 17), Admission(8.0));
+    Theatre theater1("Grand Theater", Time(12, 22), Admission(15.0));
 
-    // Create a vector of attractions
-    std::vector<Attraction> attractions = {ferrisWheel, hauntedHouse, laserTag};
+    // Store attractions in a vector
+    vector<Attraction*> attractions;
+    attractions.push_back(&park1);
+    attractions.push_back(&museum1);
+    attractions.push_back(&theater1);
 
-    // Print header
-    std::cout << "Open after " << OPENING_TIME_THRESHOLD << " and under £" << PRICE_THRESHOLD << ":" << std::endl;
-
-    // Iterate over attractions and find matching ones
-    for (const Attraction& attraction : attractions) {
-        if (attraction.getTime().getOpeningTime() < OPENING_TIME_THRESHOLD &&
-            attraction.getAdmission().getPrice() < PRICE_THRESHOLD) {
-            std::cout << "- " << attraction.getName() << std::endl;
+    // Find attractions open after 1900 and costing less than £5
+    cout << "Attractions open after 7 PM and costing less than £5:" << endl;
+    for (const Attraction* attraction : attractions) {
+        if (attraction->getTime().getClosingTime() > 19 && attraction->getAdmission().getPrice() < 5.0) {
+            cout << "- " << attraction->getName() << endl;
         }
     }
 

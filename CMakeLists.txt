@@ -9,4 +9,10 @@ add_executable(Tourist_Attraction_Finder main.cpp
         Time.cpp
         Time.h
         Attraction.cpp
-        Attraction.h)
+        Attraction.h
+        Park.cpp
+        Park.h
+        Theatre.cpp
+        Theatre.h
+        Museum.cpp
+        Museum.h)
