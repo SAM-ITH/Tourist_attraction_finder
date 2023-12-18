@@ -3,3 +3,7 @@
 //
 
 #include "Museum.h"
+
+Museum::Museum(const std::string& name, const Time& time, const Admission& admission)
+        : Attraction(name, time, admission){}
+
